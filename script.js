@@ -9,7 +9,7 @@ function checkPassword() {
 
     if (enteredPassword === correctPassword) {
         // Correct password - redirect to the main content page
-        window.location.href = "songs.html";
+        window.location.href = "main.html";
     } else {
         // Incorrect password - show error
         errorMessageElement.textContent = "Oops! That's not quite right. Try again!";
