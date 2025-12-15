@@ -66,18 +66,36 @@ button:hover {
     text-align: left;
 }
 
+/* --- Navigation Bar Styles --- */
 .nav-bar {
     margin-bottom: 30px;
-    border-bottom: 1px solid #ffc1e3;
-    padding-bottom: 10px;
+    padding-bottom: 0; /* Remove old padding */
+    border-bottom: none; /* Remove old border */
+    
+    display: flex; /* 🚨 NEW: Use Flexbox to align links horizontally */
+    justify-content: center; /* Center the entire navigation bar */
+    gap: 10px; /* Space between links */
+    flex-wrap: wrap; /* Allows links to wrap on small screens */
 }
 
 .nav-bar a {
+    /* 🚨 NEW: Make links look like buttons 🚨 */
+    background-color: #ffcdd2; /* Same light accent color as menu-button */
     color: #e91e63;
     text-decoration: none;
-    margin-right: 20px;
+    
+    padding: 10px 15px; /* Smaller padding than main menu */
+    border-radius: 8px;
+    
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 0.95em; /* Slightly smaller font */
+    
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.nav-bar a:hover {
+    background-color: #ffb3c1;
+    transform: translateY(-1px);
 }
 
 .song-item, .quote-item {
@@ -203,16 +221,30 @@ button:hover {
 }
 
 #lightbox-caption {
-    margin-top: 0; /* 🚨 CHANGE: Remove top margin */
-    font-size: 1.1em;
-    color: #333; 
+    margin-top: 15px; 
+    
+    /* 🚨 FONT CHANGES 🚨 */
+    /* 1. Font Family: Changed to a more classic, romantic serif font (like Georgia) */
+    font-family: Georgia, 'Times New Roman', serif;
+    
+    /* 2. Font Size: Increased slightly for better prominence */
+    font-size: 1.25em; 
+    
+    /* 3. Color: Changed to a softer, warmer color */
+    color: #6d4c41; /* A deep, warm brown color */
+    
+    line-height: 1.6; /* Increased line spacing for better readability */
+    font-weight: 500; /* Medium weight */
 }
+
+/* We also need to ensure the panel background color complements the new text color */
 .caption-panel {
-    /* 🚨 NEW STYLE 🚨 */
-    width: 30%; /* Caption takes 30% of the modal width */
-    padding-left: 20px; 
-    padding-top: 5px;
-    box-sizing: border-box; /* Include padding in the width */
+    width: 30%; 
+    padding: 20px; 
+    padding-top: 5px; 
+    background-color: #fcece0; /* Lighter, cream/peach color to complement brown text */
+    border-radius: 0 10px 10px 0; 
+    box-sizing: border-box; 
 }
 /* Style for the Home button within the nav bar */
 .nav-bar .home-button {
