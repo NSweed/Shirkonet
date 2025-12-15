@@ -2,12 +2,15 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #fce4ec; /* Light pink background */
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    /* 🚨 REMOVE display: flex, justify-content, and align-items 🚨 */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    
     min-height: 100vh;
     margin: 0;
-    text-align: center;
+    text-align: center; /* Keep this for centering text on the password screen */
 }
 
 .container {
@@ -17,13 +20,9 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 500px;
-    /* 🚨 ADD THIS BACK if it somehow got lost, 
-       though it should be inherited from body: */
-    /* text-align: center; */ 
     
-    /* Make sure all items on the password screen are centered */
-    display: block; /* Make sure it doesn't inherit display:flex */
-    margin: 0 auto; /* Explicitly center the container itself */
+    /* 🚨 ADD THIS LINE to center the container itself: 🚨 */
+    margin: 0 auto; 
 }
 
 h1 {
@@ -214,4 +213,18 @@ button:hover {
     padding-left: 20px; 
     padding-top: 5px;
     box-sizing: border-box; /* Include padding in the width */
+}
+/* Style for the Home button within the nav bar */
+.nav-bar .home-button {
+    background-color: #e91e63; /* Same pink as primary button */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: normal;
+    transition: background-color 0.3s;
+}
+
+.nav-bar .home-button:hover {
+    background-color: #c2185b;
 }
