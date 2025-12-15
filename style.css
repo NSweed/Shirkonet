@@ -198,3 +198,10 @@ button:hover {
     font-size: 1.1em;
     color: #333;
 }
+.caption-panel {
+    /* 🚨 NEW STYLE 🚨 */
+    width: 30%; /* Caption takes 30% of the modal width */
+    padding-left: 20px; 
+    padding-top: 5px;
+    box-sizing: border-box; /* Include padding in the width */
+}
