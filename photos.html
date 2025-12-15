@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Photo Album 📸</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="container content-page">
+        <div class="nav-bar">
+            <a href="songs.html">Songs & Lyrics</a>
+            <a href="quotes.html">Our Memories</a>
+            <a href="photos.html">Photo Album</a>
+        </div>
+        
+        <h1>Our Shared Moments</h1>
+        <p>A collection of memories, big and small, captured in time.</p>
+
+        <div id="gallery">
+		<img 
+    src="img\brandenburg.jpg" 
+    alt="Caption for screen readers" 
+    onclick="openLightbox(אנחנו בשער ברנדנבורג)">
+		
+            </div>
+
+    </div>
+
+    <div id="lightbox-modal" class="modal" onclick="closeLightbox()">
+        <div class="modal-content">
+            <img id="lightbox-image" src="" alt="">
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
