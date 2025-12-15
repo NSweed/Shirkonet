@@ -177,26 +177,29 @@ button:hover {
 
 .modal-content {
     margin: auto;
-    display: block;
+    display: flex; /* 🚨 CHANGE: Use flexbox for side-by-side layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: flex-start; /* Align items to the top */
     width: auto;
-    max-width: 90%;
-    background-color: white;
+    max-width: 90%; 
+    background-color: #fff; /* White background */
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left; /* Keep text left-aligned inside the caption panel */
 }
 
 #lightbox-image {
-    width: auto;
+    width: 70%; /* 🚨 CHANGE: Image takes 70% of the modal width */
+    max-width: 100%;
     height: auto;
     display: block;
     border-radius: 5px;
 }
 
 #lightbox-caption {
-    margin-top: 15px;
+    margin-top: 0; /* 🚨 CHANGE: Remove top margin */
     font-size: 1.1em;
-    color: #333;
+    color: #333; 
 }
 .caption-panel {
     /* 🚨 NEW STYLE 🚨 */
